@@ -3,41 +3,54 @@
 nav{
 z-index: 5;
 background-color: black;
-background-image: url(../Imagenes/spill.png);
+/*background-image: url(../Imagenes/spill.png);
 background-size: cover;
-background-position: bottom;
-
+background-position: bottom;*/
+display: flex;
+justify-content:space-between;
+align-items: center;
+    
+    padding: 10px;
+   text-align: center;
+   color: white;
+   text-decoration-line: none;
+   text-transform: uppercase;
+   font-family: "Fugaz One", sans-serif;
+   
 }
 body{
     margin: 0px; 
     padding: 0px;
     background-image: url(../Imagenes/papyr2.png);
-    background-size: containt;
-  
-    
+    background-size: contain; 
+}
+#logo img{
+    width:50px;
+    height: 50px; 
+    filter: invert(90%);
     
 }
+
 
 #menu{
     display: none;
 }
+.navhr{
+    width: 145%;
+    height: auto;
+}
 nav svg{
-    max-width: 3em;
-    max-height: 3em;
-    position: fixed;
-    right: 30px;
-    top:30px; 
-    background-image: url(../Imagenes/spill.png);
-    background-size:cover ;
-    background-position: bottom;
+    width: 3em;
+    height: 3em;
 }
 
-
+/*Menu styling*/
 .menu ul{
     list-style-type:none;
     margin: 0px;
     padding:0px;
     overflow: hidden;
+    width: 100vw;
 }
 .menu a{
     display: block; 
