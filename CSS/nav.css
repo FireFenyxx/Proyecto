@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+nav{
+z-index: 5;
+background-color: black;
+background-image: url(../Imagenes/spill.png);
+background-size: cover;
+background-position: bottom;
+
+}
+body{
+    margin: 0px; 
+    padding: 0px;
+    background-image: url(../Imagenes/papyr2.png);
+    background-size: containt;
+  
+    
+    
+}
+
+#menu{
+    display: none;
+}
+nav svg{
+    max-width: 3em;
+    max-height: 3em;
+    position: fixed;
+    right: 30px;
+    top:30px; 
+    background-image: url(../Imagenes/spill.png);
+    background-size:cover ;
+    background-position: bottom;
+}
+
+
+.menu ul{
+    list-style-type:none;
+    margin: 0px;
+    padding:0px;
+    overflow: hidden;
+}
+.menu a{
+    display: block; 
+    padding: 10px;
+   text-align: center;
+   color: white;
+   text-decoration-line: none;
+   text-transform: uppercase;
+   font-family: "Fugaz One", sans-serif;
+}
+.menu a:hover{
+    background-color: #8c8c8c;
+}
+
+.menu_lvl1{
+    background-color: #292929;
+}
+.menu_lvl2{
+    background-color: #424242;
+}
+
+/*Simbolos de + */
+.plus1{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.plus1 img{
+    width: 20px;
+    height: 20px;
+    filter: invert(100%);
+    margin-left: 15px;
+
+}
+
+/*Boton de Menu*/
+.menu_lvl0{
+    display: none;
+}
+input:checked~.menu_lvl0{
+    display: block;
+}
+/*Desplegables*/
+/*Recurso del 3 niveles https://fashehlabs.com/css/menu-horizontal-de-3-niveles/  */
+.menu_lvl2{
+    display: none !important;
+}
+.menu_lvl1 li:hover ul {
+ display: block !important;
+}
+.menu_lvl1{
+    display: none;  
+}
+.menu_lvl0 li:hover ul{
+    display:block
+}
+
+
+
+
+
+
+/*Boton de scroll up*/
+.scroll_up{
+position:fixed; 
+bottom: 30px;
+right: 30px;
+width: 50px; 
+height: 50px;
+border-radius: 0px;
+display: flex;
+}
+
+.scroll_up:hover{
+    bottom:35px;
+}

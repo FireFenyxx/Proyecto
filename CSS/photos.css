@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+.gallery{
+display: flex ; 
+flex-wrap: wrap; 
+justify-content: space-between; 
+max-width: 80vw; 
+margin: auto;}
+
+.gallery img{
+ width: calc(50% - 1em);
+ margin: 0.5em;
+ filter: grayscale(50%);
+}
+
+.gallery figcaption {
+    width: calc(50%-1em);
+}
+.gallery img:hover{
+    transform: scale(1.05);
+    filter: none}
