@@ -16,6 +16,7 @@ background-position: bottom;*/
     text-decoration-line: none;
     text-transform: uppercase;
     font-family: "Fugaz One", sans-serif;
+    
 
 }
 
@@ -24,6 +25,7 @@ body {
     padding: 0px;
     background-image: url(../Imagenes/papyr2.png);
     background-size: contain;
+    overflow: hidden;
 }
 
 #logo img {
@@ -41,6 +43,7 @@ body {
 .navhr {
     width: 145%;
     height: auto;
+    overflow: hidden;
 }
 
 nav svg {
@@ -126,14 +129,13 @@ input:checked~.menu_lvl0 {
 
 
 /*Boton de scroll up*/
-.scroll_up {
+.scroll_up{
+    width: 50px;
+    height: 50px; 
     position: fixed;
     bottom: 30px;
     right: 30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 0px;
-    display: flex;
+
 }
 
 .scroll_up:hover {

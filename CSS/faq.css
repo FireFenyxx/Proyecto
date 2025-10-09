@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    margin: 20PX 20PX 10PX 30PX;
+
+}
+
+/*Estilizacion Header*/
+
+h1{
+     font-family:  "Fugaz One", sans-serif;
+     text-transform:capitalize;
+     align-items: center;
+
+}
+
+/* PREGUNTAS desplegables */
+input {
+    display: none;
+}
+
+.answers {
+    height: 0;
+    overflow: hidden;
+}
+
+.questions:checked~.answers {
+    height: auto
+}
+
+
+/*Tratar las flechitas*/
+.faq label img{
+    height:1em;
+    width: 1.1em;
+    filter: invert(85%);
+    padding-right: 10px;
+    padding-bottom: 1px;
+    transition: all 50ms ease-in-out; 
+}
+.questions:checked~label img{
+transform: rotate(-90deg)
+}
+
+/* Estilizacion preguntas */
+
+.faq label {
+    display: block;
+    border: 2px solid black;
+    height: 2em;
+    padding: 10px 0 0 10px;
+    width: calc(100% - 20PX);
+    margin-bottom: 5px;
+   color:#ad8257;
+   background-color: #0f0f0f;
+   border-bottom-left-radius: 15px;
+   border-top-right-radius:15px; 
+   font-family:  "Fugaz One", sans-serif;
+   font-size:medium;
+}
+.answers p {
+    padding: 0 15px;
+    font-family: 'Courier New', Courier, monospace;
+    border:1px solid #fff2e6;
+    
+}
