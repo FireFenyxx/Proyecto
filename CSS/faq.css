@@ -9,7 +9,7 @@ body {
 }
 
 main {
-    margin: 20PX 20PX 10PX 30PX;
+    margin: 20px 20px 10px 30px;
 
 }
 
@@ -18,12 +18,18 @@ main {
 h1{
      font-family:  "Fugaz One", sans-serif;
      text-transform:capitalize;
-     align-items: center;
-
+     justify-content: center;
+     display: block;
+}
+h2{
+   font-family:  "Fugaz One", sans-serif;
+     text-transform:capitalize;
+     justify-content: center;
+     display: block; 
 }
 
 /* PREGUNTAS desplegables */
-input {
+.faq input {
     display: none;
 }
 
@@ -44,17 +50,46 @@ input {
     filter: invert(85%);
     padding-right: 10px;
     padding-bottom: 1px;
-    transition: all ms ease-in-out; 
+    transition: all 50ms ease-in-out; 
 }
 .questions:checked~label img{
 transform: rotate(-90deg)
+}
+
+/*Creando el input del questionaro*/
+
+.questionaire{
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+margin-top: 10px;
+    border: 0;
+    background-color: #ad8257;
+    padding: 2px 0 20px 10px;
+    border-bottom-left-radius: 15px;
+   border-top-right-radius:15px;
+   border: 1px solid black; 
+}
+.questionaire input{
+    margin: 5px;
+    min-width: 25vw;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid #3d3d3d; 
+}
+#ask{
+    width:calc(100% - 30px);
+    min-height: 60PX;
+   align-items:first baseline;
+   margin: 5px;
+    min-width: 25vw;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid #3d3d3d; 
 }
 
 /* Estilizacion preguntas */
 
 .faq label {
     display: block;
-    border: 1 solid black;
+    border: 1px solid black;
     height: 2em;
     padding: 10px 0 0 10px;
     width: calc(100% - 20PX);
@@ -68,13 +103,14 @@ transform: rotate(-90deg)
 }
 .answers p {
    margin-left:5px;
+   margin-right: 17px;
    display: block; 
    padding: 5px 5px 5px 10px;
-    margin-right: 0px;
+    
     font-family: 'Courier New', Courier, monospace;
-    width: calc(100% - 40PX);
+    
     border: 1px solid #1a1a1a;
     background-color: #f5ece6;
     color: #1a1a1a;
-    
-}
+    box-shadow: 05px 5px 3px 0 rgba(0,0,0,0.5); ;
+    }

@@ -24,8 +24,8 @@ body {
     margin: 0px;
     padding: 0px;
     background-image: url(../Imagenes/papyr2.png);
-    background-size: contain;
-    overflow: hidden;
+    background-size: 100%;
+    
 }
 
 #logo img {
