@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playwrite+US+Modern:wght@100..400&display=swap');
+
 
 body {
     padding: 0;
@@ -41,7 +44,7 @@ input {
     filter: invert(85%);
     padding-right: 10px;
     padding-bottom: 1px;
-    transition: all 50ms ease-in-out; 
+    transition: all ms ease-in-out; 
 }
 .questions:checked~label img{
 transform: rotate(-90deg)
@@ -51,7 +54,7 @@ transform: rotate(-90deg)
 
 .faq label {
     display: block;
-    border: 2px solid black;
+    border: 1 solid black;
     height: 2em;
     padding: 10px 0 0 10px;
     width: calc(100% - 20PX);
@@ -64,8 +67,14 @@ transform: rotate(-90deg)
    font-size:medium;
 }
 .answers p {
-    padding: 0 15px;
+   margin-left:5px;
+   display: block; 
+   padding: 5px 5px 5px 10px;
+    margin-right: 0px;
     font-family: 'Courier New', Courier, monospace;
-    border:1px solid #fff2e6;
+    width: calc(100% - 40PX);
+    border: 1px solid #1a1a1a;
+    background-color: #f5ece6;
+    color: #1a1a1a;
     
 }
