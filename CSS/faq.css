@@ -20,12 +20,14 @@ h1{
      text-transform:capitalize;
      justify-content: center;
      display: block;
+     text-align: center;
 }
 h2{
    font-family:  "Fugaz One", sans-serif;
      text-transform:capitalize;
      justify-content: center;
      display: block; 
+     text-align: center;
 }
 
 /* PREGUNTAS desplegables */
