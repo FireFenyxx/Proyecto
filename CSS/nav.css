@@ -88,6 +88,7 @@ nav svg {
     text-align: center;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 .plus1 img {
@@ -140,4 +141,35 @@ input:checked~.menu_lvl0 {
 
 .scroll_up:hover {
     bottom: 35px;
+}
+
+figure img{
+    width: 50%;
+    height: 50%;
+}
+
+@media screen and (min-width: 1000px){
+
+nav input {
+        display: none;
+    }
+     nav label {
+        display: none;
+    }
+
+    ul.menu_lvl0{
+        display: flex;
+        width: auto;
+        align-items: center;
+        gap: 20px;
+    }
+   
+    .menu_lvl0 a{
+        width: auto;
+        
+    }
+    .menu_lvl1{
+        position: absolute;
+        width: calc(auto+ 3%);
+    }
 }
