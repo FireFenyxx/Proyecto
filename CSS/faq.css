@@ -38,6 +38,7 @@ h2{
 .answers {
     height: 0;
     overflow: hidden;
+    
 }
 
 .questions:checked~.answers {
@@ -112,7 +113,16 @@ margin-top: 10px;
     font-family: 'Courier New', Courier, monospace;
     
     border: 1px solid #1a1a1a;
-    background-color: #f5ece6;
+    /*background-color: #f5ece6;*/
     color: #1a1a1a;
-    box-shadow: 05px 5px 3px 0 rgba(0,0,0,0.5); ;
+    box-shadow: 05px 5px 3px 0 rgba(0,0,0,0.5); 
+     background-image: repeating-linear-gradient(
+    0deg,
+    #8dd0f7,
+    1px,
+    white 1px,
+    white
+  );
+  background-size: 100% 20px;
+  background-color: white;
     }
