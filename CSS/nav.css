@@ -136,6 +136,7 @@ input:checked~.menu_lvl0 {
     position: fixed;
     bottom: 30px;
     right: 30px;
+    z-index: 2;
 
 }
 
@@ -148,6 +149,126 @@ figure img{
     height: 50%;
 }
 
+/*footer
+Resource: https://uiverse.io/dovatgabriel/pretty-fireant-44*/
+.footerhr{
+    transform: rotateX(180deg);
+    width: 105vw;
+    height: auto;
+    overflow:hidden;
+    margin: 0;
+    padding: 0;
+}
+.footer svg {
+  height: 75px;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  padding: 15px;
+  margin-top: -5px;
+}
+
+.footer::before, .footer::after {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  transition: 0.4s linear;
+  z-index: 1;
+}
+
+.footer::before {
+  content: "";
+  left: 0;
+  justify-content: flex-end;
+  background-color: #000000;
+}
+
+.footer::after {
+  content: "";
+  right: 0;
+  justify-content: flex-start;
+  background-color: #000000;
+}
+
+.footer:hover span {
+  opacity: 0;
+  z-index: -3;
+}
+
+.footer:hover::before {
+  opacity: 0.5;
+  transform: translateY(-100%);
+}
+
+.footer:hover::after {
+  opacity: 0.5;
+  transform: translateY(100%);
+}
+
+.footer span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+  font-family: "Fugaz One", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+}
+
+.footer .social-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+  /* color: #333333; */
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+
+.footer .social-link svg:hover {
+  /* background-color: rgba(249, 244, 255, 0.774); */
+  animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.1);
+  }
+
+  60% {
+    transform: scale(0.9);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/*responsive*/
 @media screen and (min-width: 1000px){
 
 nav input {
@@ -171,5 +292,10 @@ nav input {
     .menu_lvl1{
         position: absolute;
         width: calc(auto+ 3%);
+    }
+    .navhr{
+        width: 105%;
+        height: auto;
+        overflow:hidden;
     }
 }
