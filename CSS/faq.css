@@ -13,22 +13,6 @@ main {
 
 }
 
-/*Estilizacion Header*/
-
-h1{
-     font-family:  "Fugaz One", sans-serif;
-     text-transform:capitalize;
-     justify-content: center;
-     display: block;
-     text-align: center;
-}
-h2{
-   font-family:  "Fugaz One", sans-serif;
-     text-transform:capitalize;
-     justify-content: center;
-     display: block; 
-     text-align: center;
-}
 
 /* PREGUNTAS desplegables */
 .faq input {
@@ -129,3 +113,22 @@ margin-top: 10px;
   background-size: 100% 19px;
   background-color: white;
     }
+
+.about{display: block;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.about img{
+    float:left;
+    padding: 5px;
+    margin: 10px; 
+    width: 27%;
+    height:auto;
+    border: 5px solid #ad8257 ;
+}
+
+.team hr{
+    width:100vw;
+}
+
+/*Resolver el problema del Float con https://www.digitalocean.com/community/tutorials/how-to-use-float-and-columns-to-lay-out-content-with-css */

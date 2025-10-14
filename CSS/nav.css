@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playwrite+US+Modern:wght@100..400&display=swap');
+
 nav {
     z-index: 5;
     background-color: black;
@@ -16,7 +17,7 @@ background-position: bottom;*/
     text-decoration-line: none;
     text-transform: uppercase;
     font-family: "Fugaz One", sans-serif;
-    
+
 
 }
 
@@ -25,14 +26,14 @@ body {
     padding: 0px;
     background-image: url(../Imagenes/papyr2.png);
     background-size: 100%;
-    
+    overflow-x: hidden
 }
 
 #logo img {
     width: 50px;
     height: 50px;
     filter: invert(100%);
-    
+
 }
 
 
@@ -40,11 +41,19 @@ body {
     display: none;
 }
 
+
+
 .navhr {
-    width: 145%;
     height: auto;
-    overflow: hidden;
+    width: 145vw;
 }
+
+.footerhr {
+    height: 20px;
+    width: 104vw;
+    overflow-x: hidden;
+}
+
 
 nav svg {
     width: 3em;
@@ -96,7 +105,7 @@ nav svg {
     height: 20px;
     filter: invert(100%);
     margin-left: 15px;
-    transition: all 200ms ease-in-out; 
+    transition: all 200ms ease-in-out;
 }
 
 /*Boton de Menu*/
@@ -113,26 +122,32 @@ input:checked~.menu_lvl0 {
 .menu_lvl2 {
     display: none !important;
 }
+
 .menu_lvl1 li:hover ul {
     display: block !important;
-}.menu_lvl1 li:hover #plusB img{
+}
+
+.menu_lvl1 li:hover #plusB img {
     transform: rotate(180deg);
 }
+
 .menu_lvl1 {
     display: none;
 }
+
 .menu_lvl0 li:hover ul {
     display: block
 }
-.menu_lvl0 li:hover #plusA img{
+
+.menu_lvl0 li:hover #plusA img {
     transform: rotate(180deg);
 }
 
 
 /*Boton de scroll up*/
-.scroll_up{
+.scroll_up {
     width: 50px;
-    height: 50px; 
+    height: 50px;
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -144,158 +159,172 @@ input:checked~.menu_lvl0 {
     bottom: 35px;
 }
 
-figure img{
+figure img {
     width: 50%;
     height: 50%;
 }
 
 /*footer
 Resource: https://uiverse.io/dovatgabriel/pretty-fireant-44*/
-.footerhr{
+.footerhr {
     transform: rotateX(180deg);
-    width: 105vw;
-    height: auto;
-    overflow:hidden;
     margin: 0;
     padding: 0;
 }
+
 .footer svg {
-  height: 75px;
+    height: 75px;
 }
 
 .footer {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  overflow: hidden;
-  padding: 15px;
-  margin-top: -5px;
+    overflow: hidden;
+    padding: 15px;
+    margin-top: -5px;
 }
 
-.footer::before, .footer::after {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  width: 50%;
-  height: 100%;
-  transition: 0.4s linear;
-  z-index: 1;
+.footer::before,
+.footer::after {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    transition: 0.4s linear;
+    z-index: 1;
 }
 
 .footer::before {
-  content: "";
-  left: 0;
-  justify-content: flex-end;
-  background-color: #000000;
+    content: "";
+    left: 0;
+    justify-content: flex-end;
+    background-color: #000000;
 }
 
 .footer::after {
-  content: "";
-  right: 0;
-  justify-content: flex-start;
-  background-color: #000000;
+    content: "";
+    right: 0;
+    justify-content: flex-start;
+    background-color: #000000;
 }
 
 .footer:hover span {
-  opacity: 0;
-  z-index: -3;
+    opacity: 0;
+    z-index: -3;
 }
 
 .footer:hover::before {
-  opacity: 0.5;
-  transform: translateY(-100%);
+    opacity: 0.5;
+    transform: translateY(-100%);
 }
 
 .footer:hover::after {
-  opacity: 0.5;
-  transform: translateY(100%);
+    opacity: 0.5;
+    transform: translateY(100%);
 }
 
 .footer span {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  color: whitesmoke;
-  font-family: "Fugaz One", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  opacity: 1;
-  transition: opacity 0.25s;
-  z-index: 2;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: whitesmoke;
+    font-family: "Fugaz One", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    opacity: 1;
+    transition: opacity 0.25s;
+    z-index: 2;
 }
 
 .footer .social-link {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 25%;
-  height: 100%;
-  /* color: #333333; */
-  font-size: 24px;
-  text-decoration: none;
-  transition: 0.25s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    /* color: #333333; */
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.25s;
 }
 
 
 .footer .social-link svg:hover {
-  /* background-color: rgba(249, 244, 255, 0.774); */
-  animation: bounce_613 0.4s linear;
+    /* background-color: rgba(249, 244, 255, 0.774); */
+    animation: bounce_613 0.4s linear;
 }
 
 @keyframes bounce_613 {
-  40% {
-    transform: scale(1.1);
-  }
+    40% {
+        transform: scale(1.1);
+    }
 
-  60% {
-    transform: scale(0.9);
-  }
+    60% {
+        transform: scale(0.9);
+    }
 
-  80% {
-    transform: scale(1.2);
-  }
+    80% {
+        transform: scale(1.2);
+    }
 
-  100% {
-    transform: scale(1);
-  }
+    100% {
+        transform: scale(1);
+    }
 }
 
 
 /*responsive*/
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1000px) {
 
-nav input {
-        display: none;
-    }
-     nav label {
+    nav input {
         display: none;
     }
 
-    ul.menu_lvl0{
+    nav label {
+        display: none;
+    }
+
+    ul.menu_lvl0 {
         display: flex;
         width: auto;
         align-items: center;
         gap: 20px;
     }
-   
-    .menu_lvl0 a{
+
+    .menu_lvl0 a {
         width: auto;
-        
+
     }
-    .menu_lvl1{
+
+    .menu_lvl1 {
         position: absolute;
         width: calc(auto+ 3%);
     }
-    .navhr{
+
+    .navhr {
         width: 105%;
         height: auto;
-        overflow:hidden;
+        overflow: hidden;
     }
+}
+
+/*ESTILIZACION HEADERS*/
+
+
+h1, h2, h3{
+     font-family:  "Fugaz One", sans-serif;
+     text-transform:capitalize;
+     justify-content: center;
+     display: block;
+     text-align: center;
+margin:0 0 12px 0;
 }
