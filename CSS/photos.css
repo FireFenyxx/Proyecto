@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playwrite+US+Modern:wght@100..400&display=swap');
+
 .gallery{
 display: flex ; 
 flex-wrap: wrap; 

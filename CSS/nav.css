@@ -25,12 +25,12 @@ body {
     margin: 0px;
     padding: 0px;
     background-image: url(../Imagenes/papyr2.png);
-    background-size: 100%;
+    background-size: auto;
     overflow-x: hidden
 }
 
 #logo img {
-    width: 50px;
+    width: auto;
     height: 50px;
     filter: invert(100%);
 
@@ -77,7 +77,7 @@ nav svg {
     text-decoration-line: none;
     text-transform: uppercase;
     font-family: "Fugaz One", sans-serif;
-    width: 60vw;
+    width: 80vw;
 }
 
 .menu_lvl0 a:hover {
@@ -320,11 +320,20 @@ Resource: https://uiverse.io/dovatgabriel/pretty-fireant-44*/
 /*ESTILIZACION HEADERS*/
 
 
-h1, h2, h3{
+h1, h3{
      font-family:  "Fugaz One", sans-serif;
      text-transform:capitalize;
      justify-content: center;
      display: block;
      text-align: center;
 margin:0 0 12px 0;
+}
+
+h2{
+     font-family:  "Fugaz One", sans-serif;
+     text-transform:capitalize;
+     justify-content: center;
+     display: block;
+     text-align: center;
+margin:0 0 0px 0;
 }
