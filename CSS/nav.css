@@ -166,6 +166,7 @@ input:checked~.menu_lvl0 {
 
 .scroll_up:hover {
     bottom: 35px;
+    filter: invert(20%);
 }
 
 figure img {

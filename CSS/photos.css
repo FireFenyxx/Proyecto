@@ -2,7 +2,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playwrite+US+Modern:wght@100..400&display=swap');
 
-.gallery{
+/*Slider*/
+.gallery {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.slider {
+  margin: 0 auto;
+  padding: 1em;
+  width: 100%;
+  height: 35em;
+  position: relative;
+  perspective: 120000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bow {
+  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  height: 400px;
+}
+
+.slide {
+  position: absolute;
+  width: 20em ;/*modifica el width!!!*/
+  aspect-ratio: 3/4;
+  transform-origin: bottom;
+  animation: cardCycle 12s infinite;
+}
+
+.slide:nth-child(1) {
+  animation-delay: 9s;
+  background-color: #9b2948;
+}
+
+.slide:nth-child(2) {
+  animation-delay: 6s;
+  background-color: #ff7251;
+}
+
+.slide:nth-child(3) {
+  animation-delay: 3s;
+  background-color: #ffca7b;
+}
+
+.slide:nth-child(4) {
+  animation-delay: 0s;
+  background-color: #47894b;
+}
+
+
+
+@keyframes cardCycle {
+  0% {
+    transform: translateZ(0) rotateX(0);
+    z-index: 2;
+  }
+  13.88% {
+    transform: translateZ(600px) rotateX(90deg);
+    z-index: 3;
+  }
+  16.66% {
+    transform: translateZ(0px) rotateX(90deg);
+    z-index: 1;
+  }
+  83.33% {
+    transform: translateZ(0px) rotateX(0);
+    z-index: 1;
+  }
+  97.22% {
+    transform: translateZ(0) rotateX(0);
+    z-index: 2;
+  }
+  100% {
+    transform: translateZ(0) rotateX(0);
+    z-index: 2;
+  }
+}
+
+
+
+
+
+
+
+
+/*PHOP*/
+.galleria{
 display: flex ; 
 flex-wrap: wrap; 
 justify-content: space-between; 
@@ -16,7 +115,7 @@ margin: auto;}
 }
 
 .gallery figcaption {
-    width: calc(50%-1em);
+    width: calc(50%);
 }
 .gallery img:hover{
     transform: scale(1.05);
