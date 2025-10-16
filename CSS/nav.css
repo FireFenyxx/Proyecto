@@ -17,16 +17,25 @@ background-position: bottom;*/
     text-decoration-line: none;
     text-transform: uppercase;
     font-family: "Fugaz One", sans-serif;
-
-
 }
-
+.wrapper{
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 body {
     margin: 0px;
     padding: 0px;
     background-image: url(../Imagenes/papyr2.png);
     background-size: auto;
-    overflow-x: hidden
+    overflow-x: hidden;  
+    width: 100%;
+ 
+}
+
+main{
+    /* min-height: calc(100vh - 200px); */
+    flex:1;
 }
 
 #logo img {
@@ -45,12 +54,12 @@ body {
 
 .navhr {
     height: auto;
-    width: 145vw;
+    width: 100%;
 }
 
 .footerhr {
     height: 20px;
-    width: 104vw;
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -166,8 +175,10 @@ figure img {
 
 /*footer
 Resource: https://uiverse.io/dovatgabriel/pretty-fireant-44*/
+
 .footerhr {
     transform: rotateX(180deg);
+    transform: rotate(180deg);
     margin: 0;
     padding: 0;
 }
@@ -285,6 +296,9 @@ Resource: https://uiverse.io/dovatgabriel/pretty-fireant-44*/
 /*responsive*/
 @media screen and (min-width: 1000px) {
 
+    body{
+        overflow-x: hidden;
+    }
     nav input {
         display: none;
     }
