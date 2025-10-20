@@ -101,12 +101,13 @@ nav svg {
     background-color: #424242;
 }
 
-/*Simbolos de + */
+/*Simbolos de > */
 .plus1 {
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 10px 10px 10px 70px;
+
 }
 
 .plus1 img {
