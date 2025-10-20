@@ -52,10 +52,10 @@ const FOOT = `<footer><img src="Imagenes/HR.png" class="footerhr">
                         </g>
                     </svg>
                 </a>
-        </footer>
-    <div class="scroll_up">
+        <div class="scroll_up">
         <a href="#logo"> <img src="Imagenes/BotonUP2.png" alt="a"></a>
-    </div>` ;
+    </div></footer>`
+     ;
 
  export {FOOT} ;
         

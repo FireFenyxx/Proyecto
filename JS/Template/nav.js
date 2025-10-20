@@ -1,4 +1,4 @@
- const MENU =  `<span>
+ const MENU =  `
             <nav class="menu">
                 <a href="index.html" id="logo"><img src="Imagenes/Logo.png" alt="logo Inkverse"></a>
                 <input type="checkbox" name="menu" id="menu">
@@ -33,6 +33,6 @@
 
             </nav>
             <img src="Imagenes/HR.png" class="navhr">
-        </span>`  ;
+        `  ;
 
 export {MENU};

@@ -6,9 +6,15 @@ import {FOOT} from "./foot.js" ;
 
 // const display = 
 // document.createElement(MENU);
-document.body.appendChild(MENU);
+const NAV = document.createElement(`span`);
+NAV.innerHTML= `${MENU}`;
+document.getElementById("nav").appendChild(NAV);
 
-console.log(MENU);
+console.log(NAV);
+
+const FOOTE = document.createElement(`footer`);
+FOOTE.innerHTML= `${FOOT}`;
+document.getElementById("foot").appendChild(FOOTE);
 // console.log(FOOT);
 // console.log("hey")
 console.log("holaa");
