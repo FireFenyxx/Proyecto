@@ -41,7 +41,7 @@ main{
 #logo img {
     width: auto;
     height: 50px;
-    filter: invert(100%);
+    filter: invert(95%);
 
 }
 
@@ -90,15 +90,15 @@ nav svg {
 }
 
 .menu_lvl0 a:hover {
-    background-color: #8c8c8c;
+    background-color: #4c4c5c;
 }
 
 .menu_lvl1 {
-    background-color: #292929;
+    background-color: #292939;
 }
 
 .menu_lvl2 {
-    background-color: #424242;
+    background-color: #424253;
 }
 
 /*Simbolos de > */
@@ -106,16 +106,17 @@ nav svg {
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 10px 10px 10px 70px;
+    padding: 10px 10px 10px 10px;
 
 }
 
 .plus1 img {
     width: 20px;
     height: 20px;
-    filter: invert(100%);
+    filter: invert(95%);
     margin-left: 15px;
     transition: all 200ms ease-in-out;
+    position: absolute;
 }
 
 /*Boton de Menu*/
