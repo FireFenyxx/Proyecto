@@ -332,6 +332,10 @@ Resource: https://uiverse.io/dovatgabriel/pretty-fireant-44*/
         height: auto;
         overflow: hidden;
     }
+    .plus1 {
+    padding: 10px 50px 10px 10px;
+
+}
 }
 
 /*ESTILIZACION HEADERS*/
