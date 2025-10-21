@@ -31,7 +31,7 @@ const moreContent = `<img src="Imagenes/Plus.png" alt="plus"> Know More`
         boton.addEventListener(`click`, () => {
             const extraClick = boton.previousElementSibling
             if (extraClick.style.display === 'none' || extraClick.style.display === '') {
-                extraClick.style.display = 'inline';
+                extraClick.style.display = 'inline-flex';
                 boton.innerHTML = `${lessContent}`;
             } else {
                 extraClick.style.display = 'none';

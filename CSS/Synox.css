@@ -8,17 +8,25 @@ img{
     height: auto;
 }
 .know img{
-    transform: invert(100%);
+    /* filter: invert(90%); */
     opacity: 0.9;
+    max-width: 1.5em;
 }
 .know_more{
     display: none;
+    clear:both
 }
 
 .know{
-    display: block;
+    display: inline-flex;
+    height: 3em;
+    text-align: center;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    align-items: center;
+    justify-items: center;
+    vertical-align: justify;
+    font-family: "Fugaz One", sans-serif;
+    gap: 0.5em;
 }
 
-.know img{
-    max-width: 2em;
-}
+
