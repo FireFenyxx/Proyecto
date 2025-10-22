@@ -3,30 +3,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playwrite+US+Modern:wght@100..400&display=swap');
 
 /*Temporal*/
-img{
+
+/* img{
     max-width: 40vw;
     height: auto;
+} */
+
+hr{
+    clear: both;
 }
-.know img{
-    /* filter: invert(90%); */
+p{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+#roman_img_sec {
+    float: right;
+    max-width: 30vw;
+    height: auto;
+    border: 5px solid #ad8257;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 2px;
+    margin: 1em;
+}
+#adven_img_sec {
+    float: left;
+    max-width: 30vw;
+    height: auto;
+    border: 5px solid #ad8257;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 2px;
+    margin: 1em;
+
+}
+
+/* Boton  */
+.know img {
+    filter: invert(90%);
     opacity: 0.9;
     max-width: 1.5em;
 }
-.know_more{
-    display: none;
-    clear:both
-}
 
-.know{
+.know {
     display: inline-flex;
     height: 3em;
     text-align: center;
     padding: 0.5em 1.5em 0.5em 1.5em;
     align-items: center;
-    justify-items: center;
-    vertical-align: justify;
     font-family: "Fugaz One", sans-serif;
     gap: 0.5em;
+    background-color: #020202;
+    color: whitesmoke;
+    border: 0px;
+    border-radius: 15px;
 }
 
-
+.know_more {
+    display: none;
+    clear: both
+}

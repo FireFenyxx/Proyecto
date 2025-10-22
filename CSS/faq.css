@@ -115,7 +115,7 @@ main {
     background-size: 100% 19px;
     background-color: white;
 }
-
+/* sobre el autor */
 .about {
     display: block;
     font-family: 'Courier New', Courier, monospace;
@@ -133,6 +133,8 @@ margin: 10px;
     border-top-left-radius: 15px;
     margin: 15px 10px 5px 0;
 }
+
+/* El display del equipo */
 
 #teamhr {
     border: 1px solid black;

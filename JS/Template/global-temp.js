@@ -25,10 +25,10 @@ document.querySelectorAll(".know").forEach(function(boton) {
         var extraClick = boton.previousElementSibling;
         if (extraClick.style.display === 'none' || extraClick.style.display === '') {
             extraClick.style.display = 'inline-flex';
-            boton.innerHTML = `${moreContent}`
+            boton.innerHTML = `${lessContent}`
         } else {
             extraClick.style.display = 'none';
-            boton.innerHTML =`${lessContent}`; 
+            boton.innerHTML =`${moreContent}`; 
         }
     });
 });
