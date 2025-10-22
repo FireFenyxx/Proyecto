@@ -1,93 +1,59 @@
-// Referencia de code
-// {    "src": "",
-//     "alt": "",
-//     "figcaption": ""
-// }
-{
+{"images" :[{
     "src": "Imagenes/Fotos/PHOTO1.png",
     "alt": "gente tomando fotos del rascacielos de Nueva York",
     "figcaption": "Foto de <a href=\"https://unsplash.com/es/@leronep?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Lerone Pieters</a> en <a href=\"https://unsplash.com/es/fotos/dos-personas-fotografian-el-horizonte-desde-un-bote-lOV5qHJo6GA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Unsplash</a>" 
-}
+},
 {   "src": "Imagenes/Fotos/photo2.png",
     "alt": "campos de trigo tinte amarilliento",
-    "figcaption": "Foto de <a
-                        href=\"https://unsplash.com/es/@eugene_golovesov?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Eugene
-                        Golovesov</a> en <a
-                        href=\"https://unsplash.com/es/fotos/un-campo-de-hierba-alta-que-sopla-en-el-viento-GTBVycuuLW8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Unsplash</a>"
-}
+    "figcaption": "Foto de <a href=\"https://unsplash.com/es/@eugene_golovesov?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Eugene Golovesov</a> en <a href=\"https://unsplash.com/es/fotos/un-campo-de-hierba-alta-que-sopla-en-el-viento-GTBVycuuLW8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Unsplash</a>"
+},
 {
     "src": "Imagenes/Fotos/photo3.png",
     "alt": "chica sosteniendo una tabla de skate",
-    "figcaption": "Foto de <a
-                        href=\"https://unsplash.com/es/@eugene_golovesov?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Natalia
-                        Blauth
-                    </a> en <a
-                        href=\"https://unsplash.com/es/fotos/un-campo-de-hierba-alta-que-sopla-en-el-viento-GTBVycuuLW8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Unsplash</a>"
-}
+    "figcaption": "Foto de <a href=\"https://unsplash.com/es/@eugene_golovesov?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Natalia Blauth</a> en <a href=\"https://unsplash.com/es/fotos/un-campo-de-hierba-alta-que-sopla-en-el-viento-GTBVycuuLW8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Unsplash</a>"
+},
 {
     "src": "Imagenes/Fotos/photo4.png",
     "alt": "manos manejando na camara reflex",
-    "figcaption": "Foto de <a
-                        href=\"https://unsplash.com/es/@micahandsammiechaffin?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Micah
-                        & Sammie Chaffin</a> en <a
-                        href=\"https://unsplash.com/es/fotos/manos-sosteniendo-la-camara-capturando-una-escena-de-paisaje-TghqgLMhH90?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Unsplash</a>"
-}
+    "figcaption": "Foto de <a href=\"https://unsplash.com/es/@micahandsammiechaffin?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Micah & Sammie Chaffin</a> en <a href=\"https://unsplash.com/es/fotos/manos-sosteniendo-la-camara-capturando-una-escena-de-paisaje-TghqgLMhH90?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Unsplash</a>"
+},
+{
+    "src": "Imagenes/Fotos/photo5.png",
+    "alt": "manos manejando na camara reflex",
+    "figcaption": "Foto de <a href=\"https://unsplash.com/es/@micahandsammiechaffin?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Micah href=\"https://unsplash.com/es/fotos/manos-sosteniendo-la-camara-capturando-una-escena-de-paisaje-TghqgLMhH90?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Unsplash</a>"},
 {
     "src": "Imagenes/Fotos/photo6.png",
     "alt": "casetas de reducido tamaño con puertas de distintas colore4s",
-    "figcaption": "Foto de <a
-                        href=\"https://unsplash.com/es/@tanyabarrow?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Tanya
-                        Barrow</a> en <a
-                        href=\"https://unsplash.com/es/fotos/hilera-de-coloridas-cabanas-de-playa-con-paredes-blancas-4JD-d578iek?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Unsplash</a>
- "
-}
+    "figcaption": "Foto de <a href=\"https://unsplash.com/es/@tanyabarrow?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Tanya Barrow</a> en <a href=\"https://unsplash.com/es/fotos/hilera-de-coloridas-cabanas-de-playa-con-paredes-blancas-4JD-d578iek?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash\">Unsplash</a>"
+},
 {
     "src": "Imagenes/Fotos/photo7.png",
     "alt": "cute illustration ghost",
-    "figcaption": "Ilustración de <a
-                        href=\"https://unsplash.com/es/@seltz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Selene
-                        Sottile</a> en <a
-                        href=\"https://unsplash.com/es/ilustraciones/un-fantasma-azul-con-expresion-de-sorpresa-y8rngyuGqig?utm_source=unsplash&utm_medium=referral&utm_content=\">Unsplash</a>"
-}
+    "figcaption": "Ilustración de <a href=\"https://unsplash.com/es/@seltz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Selene Sottile</a> en <a href=\"https://unsplash.com/es/ilustraciones/un-fantasma-azul-con-expresion-de-sorpresa-y8rngyuGqig?utm_source=unsplash&utm_medium=referral&utm_content=\">Unsplash</a>"
+},
 {
     "src": "Imagenes/Fotos/photo8.jpg",
     "alt": "2 people eating at the bar",
-    "figcaption": "Foto de <a
-                        href=\"https://unsplash.com/es/@wenhao_ruan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Wenhao
-                        Ruan</a> en <a
-                        href=\"https://unsplash.com/es/fotos/dos-personas-sentadas-en-un-mostrador-de-un-restaurante-Ela2AO4JDWQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>"
-}
+    "figcaption": "Foto de <a href=\"https://unsplash.com/es/@wenhao_ruan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Wenhao Ruan</a> en <a href=\"https://unsplash.com/es/fotos/dos-personas-sentadas-en-un-mostrador-de-un-restaurante-Ela2AO4JDWQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>"
+},
 {
     "src": "Imagenes/Fotos/photo9.jpg",
     "alt": "Mountain snowed",
-    "figcaption": "Foto de <a
-                        href=\"https://unsplash.com/es/@gbhatt_2?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Gantavya
-                        Bhatt</a> en <a
-                        href=\"https://unsplash.com/es/fotos/majestuoso-pico-de-montana-iluminado-por-la-luz-del-amanecer-mmcSaJrRuCM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>"
-}
+    "figcaption": "Foto de <a href=\"https://unsplash.com/es/@gbhatt_2?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Gantavya Bhatt</a> en <a href=\"https://unsplash.com/es/fotos/majestuoso-pico-de-montana-iluminado-por-la-luz-del-amanecer-mmcSaJrRuCM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>"
+},
 
 {
     "src": "Imagenes/Fotos/photo10.jpg",
     "alt": "Ilustration of a pool in summer",
-    "figcaption": "Ilustración de <a
-                        href=\"https://unsplash.com/es/@annamagenta82?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Anna
-                        Magenta</a> en <a
-                        href=\"https://unsplash.com/es/ilustraciones/una-piscina-luminosa-con-un-flotador-rosa-y-plantas-AKBJJ4eApbA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>"
-}
+    "figcaption": "Ilustración de <a href=\"https://unsplash.com/es/@annamagenta82?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Anna Magenta</a> en <a href=\"https://unsplash.com/es/ilustraciones/una-piscina-luminosa-con-un-flotador-rosa-y-plantas-AKBJJ4eApbA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>"
+},
 {
     "src": "Imagenes/Fotos/photo11.jpg",
     "alt": "Cute fox in the fields",
-    "figcaption": "Ilustración de <a
-                        href=\"https://unsplash.com/es/@ahmed_hossam_eldin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Ahmed
-                        Hossam</a> en <a
-                        href=\"https://unsplash.com/es/ilustraciones/un-zorro-relajandose-en-un-paisaje-tranquilo-E_R80zTvTjI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>"
-}
+    "figcaption": "Ilustración de <a href=\"https://unsplash.com/es/@ahmed_hossam_eldin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Ahmed Hossam</a> en <a href=\"https://unsplash.com/es/ilustraciones/un-zorro-relajandose-en-un-paisaje-tranquilo-E_R80zTvTjI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>"
+},
 {
     "src": "Imagenes/Fotos/photo12.jpg",
     "alt": "Cool swordsman",
-    "figcaption": "Ilustración de <a
-                        href=\"https://unsplash.com/es/@royanirzeet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Anirzeet
-                        Roy Pramanik</a> en <a
-                        href=\"https://unsplash.com/es/ilustraciones/una-imagen-de-una-persona-con-un-sombrero-y-una-espada-2JbMgE5ZRH8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>
-"
-}
+    "figcaption": "Ilustración de <a href=\"https://unsplash.com/es/@royanirzeet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Anirzeet Roy Pramanik</a> en <a href=\"https://unsplash.com/es/ilustraciones/una-imagen-de-una-persona-con-un-sombrero-y-una-espada-2JbMgE5ZRH8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>"
+}]}
