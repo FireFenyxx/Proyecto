@@ -37,6 +37,21 @@ p{
     margin: 1em;
 
 }
+.review figure{
+    margin: 20px;
+}
+.review blockquote{
+    margin: 10px 0px;
+    font-style: italic;
+    padding-left: 5px; 
+    border-left:1px solid #020202;
+    font-family: 'Courier New', Courier, monospace;
+}
+.review figcaption{
+    justify-self: right;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 
 /* Boton  */
 .know img {

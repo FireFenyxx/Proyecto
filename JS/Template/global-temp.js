@@ -8,12 +8,12 @@ const NAV = document.createElement(`span`);
 NAV.innerHTML = `${MENU}`;
 document.getElementById("nav").appendChild(NAV);
 
-console.log(NAV);
+// console.log(NAV);
 
 const FOOTE = document.createElement(`footer`);
 FOOTE.innerHTML = `${FOOT}`;
 document.getElementById("foot").appendChild(FOOTE);
-console.log(FOOT);
+// console.log(FOOT);
 
 // Boton de Know more --------------------
 
@@ -24,7 +24,7 @@ document.querySelectorAll(".know").forEach(function(boton) {
     boton.addEventListener('click', function() {
         var extraClick = boton.previousElementSibling;
         if (extraClick.style.display === 'none' || extraClick.style.display === '') {
-            extraClick.style.display = 'inline-flex';
+            extraClick.style.display = 'block';
             boton.innerHTML = `${lessContent}`
         } else {
             extraClick.style.display = 'none';
@@ -32,4 +32,19 @@ document.querySelectorAll(".know").forEach(function(boton) {
         }
     });
 });
+fetch('JS/Template/Data/Gallery.json')
+  .then(function(response) {
+    return response.text(); 
+  })
+  .then(function(text) {
+    
+injectGallery.innerHTML = `<img src="${galleryArray}">`;
+document.getElementById(".galeria").appendChild(injectGallery);
+  })
+  .catch(function(error) {
+    console.error('Error loading JSON:', error);
+  })
 
+let galleryArray = JSON.parse(text);
+    console.log(galleryArray); 
+    let injectGallery = document.createElement(`figure`);
