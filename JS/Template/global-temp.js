@@ -43,7 +43,7 @@ fetch('./JS/Template/Data/Gallery.json')
  let galleryArray = JSON.parse(response);
     console.log(galleryArray); 
     let injectGallery = document.createElement(`figure`);   
-injectGallery.innerHTML = `<img src="${galleryArray[0].src}">`;
+injectGallery.innerHTML = `<img src="${galleryArray[0].src}" alt "${galleryArray[0].alt}> <figcaption>${galleryArray[0].figcaption}</figcaption>`;
 document.getElementById("galeria").appendChild(injectGallery);
   })
   .catch(function(error) {
