@@ -36,18 +36,22 @@ document.querySelectorAll(".know").forEach(function(boton) {
 // JSON
 
 fetch('./JS/Template/Data/Gallery.json')
-  .then(function(response) {
-    return response.text(); 
-  })
-  .then(function(response) {
- let galleryArray = JSON.parse(response);
-    console.log(galleryArray); 
-    let injectGallery = document.createElement(`figure`);   
-injectGallery.innerHTML = `<img src="${galleryArray[0].src}" alt "${galleryArray[0].alt}> <figcaption>${galleryArray[0].figcaption}</figcaption>`;
-document.getElementById("galeria").appendChild(injectGallery);
-  })
-  .catch(function(error) {
-    console.error('Error loading JSON:', error);
-  })
+  .then(response => response.json())
+  .then(galleryArray => {
+    console.log(galleryArray);
 
+    const galleryContainer = document.getElementById("galeria");
+ 
+    galleryArray.forEach(item => {
+      const figure = document.createElement("figure");
+      figure.innerHTML = `
+        <img src="${item.src}" alt="${item.alt}">
+        <figcaption>${item.figcaption}</figcaption>
+      `;
+      galleryContainer.appendChild(figure);
+    });
+  })
+  .catch(error => {
+    console.error('Error loading JSON:', error);
+  });
 

@@ -144,7 +144,7 @@ input:checked~.menu_lvl0 {
 .menu_lvl1 li:hover #plusB img {
     transform: rotate(180deg);
 }
-#toggleA:checked + label + ul + {
+#toggleA:checked + label + ul{
   display: block;}
 
 .menu-toggle {
