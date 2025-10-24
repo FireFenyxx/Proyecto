@@ -22,7 +22,7 @@ const moreContent = `<img src="Imagenes/Plus.png" alt="plus"> Know More`
 
 document.querySelectorAll(".know").forEach(function(boton) {
     boton.addEventListener('click', function() {
-        var extraClick = boton.previousElementSibling;
+        var extraClick = boton.closest('span').previousElementSibling;
         if (extraClick.style.display === 'none' || extraClick.style.display === '') {
             extraClick.style.display = 'block';
             boton.innerHTML = `${lessContent}`
@@ -32,19 +32,22 @@ document.querySelectorAll(".know").forEach(function(boton) {
         }
     });
 });
-fetch('JS/Template/Data/Gallery.json')
+
+// JSON
+
+fetch('./JS/Template/Data/Gallery.json')
   .then(function(response) {
     return response.text(); 
   })
-  .then(function(text) {
-    
-injectGallery.innerHTML = `<img src="${galleryArray}">`;
-document.getElementById(".galeria").appendChild(injectGallery);
+  .then(function(response) {
+ let galleryArray = JSON.parse(response);
+    console.log(galleryArray); 
+    let injectGallery = document.createElement(`figure`);   
+injectGallery.innerHTML = `<img src="${galleryArray[0].src}">`;
+document.getElementById("galeria").appendChild(injectGallery);
   })
   .catch(function(error) {
     console.error('Error loading JSON:', error);
   })
 
-let galleryArray = JSON.parse(text);
-    console.log(galleryArray); 
-    let injectGallery = document.createElement(`figure`);
+
