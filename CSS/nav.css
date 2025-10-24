@@ -138,9 +138,17 @@ input:checked~.menu_lvl0 {
 .menu_lvl1 li:hover ul {
     display: block !important;
 }
+#toggleB:checked + label + ul {
+  display: block !important;}
 
 .menu_lvl1 li:hover #plusB img {
     transform: rotate(180deg);
+}
+#toggleA:checked + label + ul + {
+  display: block;}
+
+.menu-toggle {
+  display: none;
 }
 
 .menu_lvl1 {
@@ -150,6 +158,7 @@ input:checked~.menu_lvl0 {
 .menu_lvl0 li:hover ul {
     display: block
 }
+
 
 .menu_lvl0 li:hover #plusA img {
     transform: rotate(180deg);
