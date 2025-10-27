@@ -326,6 +326,9 @@ Resource: https://uiverse.io/dovatgabriel/pretty-fireant-44*/
         align-items: center;
         gap: 70px;
     }
+    .menu_lvl0 {
+        font-size: x-large;
+    }
 
     .menu_lvl0 a {
         width: auto;
@@ -343,6 +346,8 @@ Resource: https://uiverse.io/dovatgabriel/pretty-fireant-44*/
         height: auto;
         overflow: hidden;
     }
+    #logo img{    width: auto;
+    height: 75px;}
     .plus1 {
     padding: 10px 2em 10px 2em;
      display: block;
