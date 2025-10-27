@@ -324,7 +324,7 @@ Resource: https://uiverse.io/dovatgabriel/pretty-fireant-44*/
         display: flex;
         width: auto;
         align-items: center;
-        gap: 20px;
+        gap: 70px;
     }
 
     .menu_lvl0 a {
@@ -334,7 +334,8 @@ Resource: https://uiverse.io/dovatgabriel/pretty-fireant-44*/
 
     .menu_lvl1 {
         position: absolute;
-        width: calc(auto+ 3%);
+        width: 20vw;
+         align-items: center;
     }
 
     .navhr {
@@ -343,7 +344,14 @@ Resource: https://uiverse.io/dovatgabriel/pretty-fireant-44*/
         overflow: hidden;
     }
     .plus1 {
-    padding: 10px 50px 10px 10px;
+    padding: 10px 2em 10px 2em;
+     display: block;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    text-decoration-line: none;
+    text-transform: uppercase;
+    margin-right: 10px;
 
 }
 }
