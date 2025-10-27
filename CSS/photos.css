@@ -111,15 +111,18 @@
 #galeria {
   display: flex;
   flex-wrap: wrap;
+  
+   align-items: flex-start;   
+  align-content: flex-start;
   justify-content: space-between;
   max-width: 80vw;
-  margin: auto;
+  margin: 5px 0 5px 0;
 }
 
 #galeria figure {
   width: calc(50% - 1em);
-
-  margin: 0;
+margin: 5px 0 5px 0;
+  
 }
 
 #galeria img {
@@ -132,8 +135,6 @@
   box-shadow: 05px 5px 3px 0 rgba(0, 0, 0, 0.5);
   
 }
-
-
 
 #galeria figcaption {
   max-width: calc(100% -1em);
