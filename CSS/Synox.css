@@ -92,6 +92,7 @@ p{
     clear: both
 }
 .know_box {
-    justify-self: center;
-    display: block;
+    justify-content: center;
+    display: flex;
+    clear: both
 }
