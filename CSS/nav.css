@@ -26,10 +26,11 @@ background-position: bottom;*/
 body {
     margin: 0px;
     padding: 0px;
+     width: 100%;
     background-image: url(../Imagenes/papyr2.png);
     background-size: auto;
-    overflow-x: hidden;  
-    width: 100%;
+    overflow: hidden;  
+    
  
 }
 
@@ -37,6 +38,12 @@ main{
     /* min-height: calc(100vh - 200px); */
     flex:1;
     padding: 30px;
+}
+#logo{
+    color: whitesmoke;
+    text-decoration: none;
+    align-self: center;
+    display: block;
 }
 
 #logo img {
@@ -383,3 +390,6 @@ h2{
      text-align: center;
 margin:0 0 0px 0;
 }
+
+
+

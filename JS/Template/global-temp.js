@@ -38,7 +38,7 @@ document.querySelectorAll(".know").forEach(function(boton) {
 fetch('./JS/Template/Data/Gallery.json')
   .then(response => response.json())
   .then(galleryArray => {
-    console.log(galleryArray);
+    // console.log(galleryArray);
 
     const galleryContainer = document.getElementById("galeria");
  
