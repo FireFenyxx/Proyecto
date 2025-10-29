@@ -29,7 +29,7 @@ body {
      width: 100%;
     background-image: url(../Imagenes/papyr2.png);
     background-size: auto;
-    overflow: hidden;  
+    overflow: auto;  
     
  
 }
