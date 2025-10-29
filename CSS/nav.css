@@ -44,6 +44,9 @@ main{
     text-decoration: none;
     align-self: center;
     display: block;
+    text-align: center;
+    align-items: center;
+    display: inline-flex;
 }
 
 #logo img {
@@ -51,6 +54,10 @@ main{
     height: 50px;
     filter: invert(95%);
 
+}
+.logo{
+        justify-content: center;
+    display: flex;
 }
 
 
@@ -136,6 +143,9 @@ nav svg {
 
 input:checked~.menu_lvl0 {
     display: block;
+}
+input:checked~#logo span {
+    display: none;
 }
 
 /*Desplegables*/

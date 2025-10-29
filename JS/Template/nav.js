@@ -1,7 +1,7 @@
 const MENU = `
             <nav class="menu">
-        <a href="index.html" id="logo"><img src="Imagenes/Logo.png" alt="logo Inkverse">inkverse</a>
         <input type="checkbox" name="menu" id="menu">
+        <a href="index.html" id="logo"><img src="Imagenes/Logo.png" alt="logo Inkverse"> <span class=logo>inkverse</span></a>
 
         <ul class="menu_lvl0">
             <li><a href="index.html">HOME</a></li>
