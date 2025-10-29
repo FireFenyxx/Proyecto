@@ -29,7 +29,8 @@ body {
      width: 100%;
     background-image: url(../Imagenes/papyr2.png);
     background-size: auto;
-    overflow: auto;  
+    overflow-x: hidden;  
+    overflow-y:auto;
     
  
 }
@@ -90,7 +91,7 @@ nav svg {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .menu_lvl0 a {
@@ -363,7 +364,7 @@ Resource: https://uiverse.io/dovatgabriel/pretty-fireant-44*/
     .navhr {
         width: 105%;
         height: auto;
-        overflow: hidden;
+        overflow-x: hidden;
     }
     #logo img{    width: auto;
     height: 75px;}
