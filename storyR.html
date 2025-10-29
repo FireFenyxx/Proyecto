@@ -9,10 +9,10 @@
   <link rel="stylesheet" href="CSS/nav.css">
   <!-- To be moved a CSS -->
   <style>
-    .scroll-container {
+    /* .scroll-container {
       display: flex;
       flex-direction: row;
-      overflow-x: scroll;
+      overflow-x: auto;
       scroll-behavior: smooth;
       width: 100%;
       height: 30vh;
@@ -22,6 +22,7 @@
       scrollbar-color: #888 #f4f4f4;
       scroll-behavior: smooth;
     }
+
     .section {
       flex: 0 0 85vw;
       height: 95%;
@@ -39,8 +40,230 @@
           white);
       background-size: 100% 19px;
       background-color: white;
+    } */
+
+    /* The pop up card CSS */
+    .card {
+      --bg-card: #27272a;
+      --primary: #6d28d9;
+      --primary-800: #4c1d95;
+      --primary-shadow: #2e1065;
+      --light: #d9d9d9;
+      --zinc-800: #18181b;
+      --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
+
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1rem;
+      width: 14rem;
+      background-color: var(--bg-card);
+      border-radius: 1rem;
     }
 
+    .image_container {
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      z-index: 5;
+      width: 100%;
+      height: 8rem;
+      background-color: var(--primary-800);
+      border-radius: 0.5rem;
+    }
+
+    .image_container .image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 3rem;
+      fill: var(--light);
+    }
+
+    .title {
+      overflow: clip;
+      width: 100%;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--light);
+      text-transform: capitalize;
+      text-wrap: nowrap;
+      text-overflow: ellipsis;
+      text-align: center;
+    }
+
+    .size {
+      font-size: 0.75rem;
+      color: var(--light);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .list-size {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      margin-top: 0.25rem;
+    }
+
+    .list-size .item-list {
+      list-style: none;
+    }
+
+    .list-size .item-list-button {
+      cursor: pointer;
+      padding: 0.5rem;
+      background-color: var(--zinc-800);
+      font-size: 0.75rem;
+      color: var(--light);
+      border: 2px solid var(--zinc-800);
+      border-radius: 0.25rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .item-list-button:hover {
+      border: 2px solid var(--light);
+    }
+
+    .item-list-button:focus {
+      background-color: var(--primary);
+      border: 2px solid var(--primary-shadow);
+      box-shadow: inset 0px 1px 4px var(--primary-shadow);
+    }
+
+    .action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    /* New Download Button Styles */
+    .download-button {
+      position: relative;
+      width: 100%;
+      height: 2.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: var(--bg-linear);
+      border: 2px solid hsla(262, 18%, 57%, 0.5);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .button-text {
+      color: var(--light);
+      font-weight: 750;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .button-icon {
+      position: absolute;
+      height: 100%;
+      width: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary-800);
+      right: -2.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .download-svg {
+      width: 1.25rem;
+      fill: var(--light);
+    }
+
+    .download-button:hover {
+      background: var(--primary-800);
+    }
+
+    .download-button:hover .button-text {
+      transform: translateX(-1.25rem);
+      opacity: 0;
+    }
+
+    .download-button:hover .button-icon {
+      right: 0;
+      width: 100%;
+    }
+
+    .download-button:active {
+      transform: scale(0.95);
+    }
+
+    .download-button:active .button-icon {
+      background-color: var(--primary-shadow);
+    }
+
+    /* The pop up styling */
+    
+    #openPopup {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* The overlay background (hidden by default) */
+    .popup-overlay {
+      position: fixed;
+
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    /* The popup box */
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+      animation: fadeIn 0.3s ease;
+    }
+
+    /* Close button */
+    .close-btn {
+      position: relative;
+      width: 100%;
+      height: 2.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: var(--bg-linear);
+      border: 2px solid hsla(262, 18%, 57%, 0.5);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
   </style>
 </head>
 
@@ -49,13 +272,104 @@
   <div class="wrapper">
     <div id="nav"></div>
     <main>
+
       <div class="scroll-container">
-        <div class="section"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium totam ad explicabo ipsa ipsum quas illo quos quisquam suscipit aut, beatae odit itaque, voluptas, officia commodi aliquid omnis nemo nostrum?</p></div>
+        <!-- slider HTML -->
+        <!-- <div class="section">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium totam ad explicabo ipsa ipsum quas
+            illo quos quisquam suscipit aut, beatae odit itaque, voluptas, officia commodi aliquid omnis nemo nostrum?
+          </p>
+        </div>
         <div class="section">Section 2</div>
         <div class="section">Section 3</div>
         <div class="section">Section 4</div>
+      </div> -->
+        <!-- pop up purchase card -->
+        <!-- <div class="card">
+        <div class="image_container">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="image">
+            <path
+              d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+            </path>
+          </svg>
+        </div>
+        <div class="title">
+          <span>TheApp</span>
+        </div>
+        <div class="size">
+          <span>Minecraft-Version</span>
+          <ul class="list-size">
+            <li class="item-list"><button class="item-list-button">1.8.9</button></li>
+            <li class="item-list">
+              <button class="item-list-button">1.21.1</button>
+            </li>
+          </ul>
+        </div>
+        <div class="action">
+          <button class="download-button">
+            <span class="button-text">DOWNLOAD</span>
+            <span class="button-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" class="download-svg">
+                <path
+                  d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z">
+                </path>
+                <path
+                  d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z">
+                </path>
+                <path
+                  d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z">
+                </path>
+              </svg>
+            </span>
+          </button>
+        </div> -->
+        <!-- boton pop up -->
+        <button id="openPopup">Show Popup</button>
+        <div class="popup-overlay" id="popup">
+          <div class="card">
+            <div class="image_container">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="image">
+                <path
+                  d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+                </path>
+              </svg>
+            </div>
+            <div class="title">
+              <span>TheApp</span>
+            </div>
+            <div class="size">
+              <span>Minecraft-Version</span>
+              <ul class="list-size">
+                <li class="item-list"><button  class="item-list-button">1.8.9</button></li>
+                <li class="item-list">
+                  <button class="item-list-button">1.21.1</button>
+                </li>
+              </ul>
+            </div>
+            <div class="action">
+              <button class="download-button">
+                <span class="button-text">DOWNLOAD</span>
+                <span class="button-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" class="download-svg">
+                    <path
+                      d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z">
+                    </path>
+                    <path
+                      d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z">
+                    </path>
+                    <path
+                      d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z">
+                    </path>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <button class="close-btn" id="closePopup">Close</button>
+
+          </div>
       </div>
-<!-- To be transplanted into JS -->
+
+      <!-- To be transplanted into JS -->
       <script>
         const container = document.getElementById('scrollContainer');
         const sections = document.querySelectorAll('.section');
@@ -83,6 +397,25 @@
 
         window.addEventListener('load', () => {
           setTimeout(autoScroll, 1000);
+        });
+        // The POP UP BOTON
+        const openBtn = document.getElementById('openPopup');
+        const closeBtn = document.getElementById('closePopup');
+        const popup = document.getElementById('popup');
+
+        // Open popup
+        openBtn.addEventListener('click', () => {
+          popup.style.display = 'flex'; // show popup
+        });
+
+        // Close popup
+        closeBtn.addEventListener('click', () => {
+          popup.style.display = 'none';
+        });
+
+        // Optional: close if user clicks outside the box
+        popup.addEventListener('click', (e) => {
+          if (e.target === popup) popup.style.display = 'none';
         });
       </script>
     </main>
