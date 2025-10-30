@@ -82,7 +82,7 @@
       fill: var(--light);
     }
 
-    .title {
+    .book__title {
       overflow: clip;
       width: 100%;
       font-size: 1.5rem;
@@ -204,18 +204,33 @@
     }
 
     /* The pop up styling */
-    
-    #openPopup {
+
+    #purchasePopup {
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
+      align-items: center;
+      display: inline-flex;
+      border: 0px;
+      border-radius: 15px;
+      font-family: "Fugaz One", sans-serif;
+      gap: 0.5em;
+      background-color: #c57e36;
+      color: #020202;
+    }
+
+    #purchasePopup svg {
+      max-width: 2.5em;
+      max-height: 2.5em;
+      
+
     }
 
     /* The overlay background (hidden by default) */
-    .popup-overlay {
+    .popup_purchase_overlay {
       position: absolute;
-      top:0;
-      left:0;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0.7);
@@ -273,10 +288,10 @@
   <div class="wrapper">
     <div id="nav"></div>
     <main>
-<div>
-      <div class="scroll-container">
-        <!-- slider HTML -->
-        <!-- <div class="section">
+      <div>
+        <div class="scroll-container">
+          <!-- slider HTML -->
+          <!-- <div class="section">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium totam ad explicabo ipsa ipsum quas
             illo quos quisquam suscipit aut, beatae odit itaque, voluptas, officia commodi aliquid omnis nemo nostrum?
           </p>
@@ -285,140 +300,122 @@
         <div class="section">Section 3</div>
         <div class="section">Section 4</div>
       </div> -->
-        <!-- pop up purchase card -->
-        <!-- <div class="card">
-        <div class="image_container">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="image">
-            <path
-              d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
-            </path>
-          </svg>
-        </div>
-        <div class="title">
-          <span>TheApp</span>
-        </div>
-        <div class="size">
-          <span>Minecraft-Version</span>
-          <ul class="list-size">
-            <li class="item-list"><button class="item-list-button">1.8.9</button></li>
-            <li class="item-list">
-              <button class="item-list-button">1.21.1</button>
-            </li>
-          </ul>
-        </div>
-        <div class="action">
-          <button class="download-button">
-            <span class="button-text">DOWNLOAD</span>
-            <span class="button-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" class="download-svg">
-                <path
-                  d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z">
-                </path>
-                <path
-                  d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z">
-                </path>
-                <path
-                  d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z">
-                </path>
-              </svg>
-            </span>
-          </button>
-        </div> -->
-        <!-- boton pop up -->
-        <button id="openPopup">Show Popup</button>
-        <div class="popup-overlay" id="popup">
-          <div class="card">
-            <div class="image_container">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="image">
-                <path
-                  d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
-                </path>
-              </svg>
-            </div>
-            <div class="title">
-              <span>TheApp</span>
-            </div>
-            <div class="size">
-              <span>Minecraft-Version</span>
-              <ul class="list-size">
-                <li class="item-list"><button  class="item-list-button">1.8.9</button></li>
-                <li class="item-list">
-                  <button class="item-list-button">1.21.1</button>
-                </li>
-              </ul>
-            </div>
-            <div class="action">
-              <button class="download-button">
-                <span class="button-text">DOWNLOAD</span>
-                <span class="button-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" class="download-svg">
-                    <path
-                      d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z">
-                    </path>
-                    <path
-                      d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z">
-                    </path>
-                    <path
-                      d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z">
-                    </path>
-                  </svg>
-                </span>
-              </button>
-            </div>
-            <button class="close-btn" id="closePopup">Close</button>
+          <!-- boton pop up -->
+          <button id="purchasePopup"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+              class="size-5">
+              <path
+                d="M1 1.75A.75.75 0 0 1 1.75 1h1.628a1.75 1.75 0 0 1 1.734 1.51L5.18 3a65.25 65.25 0 0 1 13.36 1.412.75.75 0 0 1 .58.875 48.645 48.645 0 0 1-1.618 6.2.75.75 0 0 1-.712.513H6a2.503 2.503 0 0 0-2.292 1.5H17.25a.75.75 0 0 1 0 1.5H2.76a.75.75 0 0 1-.748-.807 4.002 4.002 0 0 1 2.716-3.486L3.626 2.716a.25.25 0 0 0-.248-.216H1.75A.75.75 0 0 1 1 1.75ZM6 17.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM15.5 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
+            </svg><span>Purchase Book</span></button>
+          <div class="popup_purchase_overlay" id="popupOverlay">
+            <div class="card">
+              <div class="image_container">
 
+              </div>
+              <div class="book__title">
+                <span>TheApp</span>
+              </div>
+                <div class="size">
+    <span>Adventure Book </span>
+    <ul class="list-size">
+      <li class="item-list">
+        <button class="item-list-button" data-link="https://example.com/descarga-1.8.9">E-Book</button>
+      </li>
+      <li class="item-list">
+        <button class="item-list-button" data-link="https://www.amazon.es">Paperback</button>
+      </li>
+    </ul>
+  </div>
+              <div class="action">
+                <button class="download-button">
+                  <span class="button-text" id="purchaseButon"></a>
+                    Go Purchase</span>
+                  <span class="button-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" class="download-svg">
+                      <path
+                        d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z">
+                      </path>
+                      <path
+                        d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z">
+                      </path>
+                      <path
+                        d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z">
+                      </path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <button class="close-btn" id="closePurchasePopup">Close</button>
+
+            </div>
           </div>
-      </div>
 
-      <!-- To be transplanted into JS -->
-      <script>
-        const container = document.getElementById('scrollContainer');
-        const sections = document.querySelectorAll('.section');
-        let index = 0;
-        let paused = false;
-        let scrollTimer;
+          <!-- To be transplanted into JS -->
+          <script>
+            // const container = document.getElementById('scrollContainer');
+            // const sections = document.querySelectorAll('.section');
+            // let index = 0;
+            // let paused = false;
+            // let scrollTimer;
 
-        function autoScroll() {
-          if (paused) return;
-          sections[index].scrollIntoView({ behavior: 'smooth', inline: 'center' });
-          index = (index + 1) % sections.length;
-          scrollTimer = setTimeout(autoScroll, 3000);
-        }
+            // function autoScroll() {
+            //   if (paused) return;
+            //   sections[index].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+            //   index = (index + 1) % sections.length;
+            //   scrollTimer = setTimeout(autoScroll, 3000);
+            // }
 
-        sections.forEach(section => {
-          section.addEventListener('mouseenter', () => {
-            paused = true;
-            clearTimeout(scrollTimer);
-          });
-          section.addEventListener('mouseleave', () => {
-            paused = false;
-            autoScroll();
-          });
-        });
+            // sections.forEach(section => {
+            //   section.addEventListener('mouseenter', () => {
+            //     paused = true;
+            //     clearTimeout(scrollTimer);
+            //   });
+            //   section.addEventListener('mouseleave', () => {
+            //     paused = false;
+            //     autoScroll();
+            //   });
+            // });
 
-        window.addEventListener('load', () => {
-          setTimeout(autoScroll, 1000);
-        });
-        // The POP UP BOTON
-        const openBtn = document.getElementById('openPopup');
-        const closeBtn = document.getElementById('closePopup');
-        const popup = document.getElementById('popup');
+            // window.addEventListener('load', () => {
+            //   setTimeout(autoScroll, 1000);
+            // });
+            // The POP UP BOTON
+            const openBtn = document.getElementById('purchasePopup');
+            const closeBtn = document.getElementById('closePurchasePopup');
+            const popupOverlay = document.getElementById('popupOverlay');
 
-        // Open popup
-        openBtn.addEventListener('click', () => {
-          popup.style.display = 'flex'; // show popup
-        });
+            openBtn.addEventListener('click', () => {
+              popupOverlay.style.display = 'flex'; 
+            });
+            closeBtn.addEventListener('click', () => {
+              popupOverlay.style.display = 'none';
+            });
+            popupOverlay.addEventListener('click', (e) => {
+              if (e.target === popupOverlay) popupOverlay.style.display = 'none';
+            });
 
-        // Close popup
-        closeBtn.addEventListener('click', () => {
-          popup.style.display = 'none';
-        });
+            let selectedLink = null;
 
-        // Optional: close if user clicks outside the box
-        popup.addEventListener('click', (e) => {
-          if (e.target === popup) popup.style.display = 'none';
-        });
-      </script>
+  // Cuando se hace clic en una versión
+  document.querySelectorAll('.item-list-button').forEach(button => {
+    button.addEventListener('click', () => {
+      // Guardamos el enlace asociado
+      selectedLink = button.getAttribute('data-link');
+
+      // Indicamos visualmente cuál está seleccionado (opcional)
+      document.querySelectorAll('.item-list-button').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+
+  // Cuando se hace clic en el botón de descarga
+  document.getElementById('purchaseButon').addEventListener('click', () => {
+    if (selectedLink) {
+      window.location.href = selectedLink;
+    } else {
+      alert('Por favor, selecciona una versión antes de descargar.');
+    }
+  });
+          </script>
     </main>
     <div id="foot"></div>
   </div>
