@@ -55,3 +55,42 @@ fetch('./JS/Template/Data/Gallery.json')
     console.error('Error loading JSON:', error);
   });
 
+  // The POP UP BOTON
+            const openBtn = document.getElementById('purchasePopup');
+            const closeBtn = document.getElementById('closePurchasePopup');
+            const popupOverlay = document.getElementById('popupOverlay');
+
+            openBtn.addEventListener('click', () => {
+              popupOverlay.style.display = 'flex';
+              document.body.style.overflow = 'hidden';
+            });
+            closeBtn.addEventListener('click', () => {
+              popupOverlay.style.display = 'none';
+              document.body.style.overflow = '';
+            });
+            popupOverlay.addEventListener('click', (e) => {
+              if (e.target === popupOverlay) popupOverlay.style.display = 'none';
+            });
+
+            let selectedLink = null;
+
+
+            document.querySelectorAll('.item-list-button').forEach(button => {
+              button.addEventListener('click', () => {
+
+                selectedLink = button.getAttribute('data-link');
+                console.log(button);
+                console.log(selectedLink);
+                document.querySelectorAll('.item-list-button').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+              });
+            });
+            document.getElementById('purchaseButon').addEventListener('click', () => {
+              console.log(selectedLink);
+              if (selectedLink) {
+                window.location.href = selectedLink;
+              } else {
+                alert('Por favor, selecciona una versión antes de descargar.');
+              }
+            });
+

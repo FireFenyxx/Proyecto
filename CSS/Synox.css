@@ -94,11 +94,12 @@ p{
 .know_box {
     justify-content: center;
     display: flex;
-    clear: both
+    clear: both;
+    margin-bottom: 10px;
 }
 
 /*POP up purchase*/
- .card {
+.card {
   --bg-card: #fddaae;
   --primary: #c57e36;
   --primary-800: #e7a96b;
@@ -155,10 +156,11 @@ p{
 
 .size {
   font-size: 0.75rem;
-  color: var(--light);
+  color: var(--zinc-800);
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .list-size {
@@ -179,6 +181,7 @@ p{
   border: 2px solid var(--zinc-800);
   border-radius: 0.25rem;
   transition: all 0.3s ease-in-out;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .item-list-button:hover {
@@ -277,6 +280,7 @@ p{
   gap: 0.5em;
   background-color: #c57e36;
   color: #020202;
+  
 }
 
 #purchasePopup svg {
@@ -286,11 +290,11 @@ p{
 
 
 .popup_purchase_overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.7);
   display: none;
   justify-content: center;
