@@ -56,41 +56,44 @@ fetch('./JS/Template/Data/Gallery.json')
   });
 
   // The POP UP BOTON
-            const openBtn = document.getElementById('purchasePopup');
-            const closeBtn = document.getElementById('closePurchasePopup');
-            const popupOverlay = document.getElementById('popupOverlay');
+document.querySelectorAll('.purchasePopup').forEach(openBtn => {
+  
+  const popupOverlay = openBtn.nextElementSibling; 
+  const closeBtn = popupOverlay.querySelector('.close-btn');
+  const purchaseBtn = popupOverlay.querySelector('#purchaseButon');
+  const itemButtons = popupOverlay.querySelectorAll('.item-list-button');
+  let selectedLink = null;
 
-            openBtn.addEventListener('click', () => {
-              popupOverlay.style.display = 'flex';
-              document.body.style.overflow = 'hidden';
-            });
-            closeBtn.addEventListener('click', () => {
-              popupOverlay.style.display = 'none';
-              document.body.style.overflow = '';
-            });
-            popupOverlay.addEventListener('click', (e) => {
-              if (e.target === popupOverlay) popupOverlay.style.display = 'none';
-            });
+  openBtn.addEventListener('click', () => {
+    popupOverlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  });
 
-            let selectedLink = null;
+  
+  function closePopup() {
+    popupOverlay.style.display = 'none';
+    document.body.style.overflow = '';
+  }
 
+  closeBtn.addEventListener('click', closePopup);
 
-            document.querySelectorAll('.item-list-button').forEach(button => {
-              button.addEventListener('click', () => {
+  popupOverlay.addEventListener('click', (e) => {
+    if (e.target === popupOverlay) closePopup();
+  });
 
-                selectedLink = button.getAttribute('data-link');
-                console.log(button);
-                console.log(selectedLink);
-                document.querySelectorAll('.item-list-button').forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-              });
-            });
-            document.getElementById('purchaseButon').addEventListener('click', () => {
-              console.log(selectedLink);
-              if (selectedLink) {
-                window.location.href = selectedLink;
-              } else {
-                alert('Por favor, selecciona una versión antes de descargar.');
-              }
-            });
+  itemButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      selectedLink = button.getAttribute('data-link');
+      itemButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
 
+  purchaseBtn.addEventListener('click', () => {
+    if (selectedLink) {
+      window.location.href = selectedLink;
+    } else {
+      alert('Por favor, selecciona una versión antes de descargar.');
+    }
+  });
+});

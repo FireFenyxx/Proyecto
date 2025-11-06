@@ -268,7 +268,7 @@ p{
 }
 
 
-#purchasePopup {
+.purchasePopup {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
@@ -283,7 +283,7 @@ p{
   
 }
 
-#purchasePopup svg {
+.purchasePopup svg {
   max-width: 2.5em;
   max-height: 2.5em;
 }
