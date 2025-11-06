@@ -96,3 +96,222 @@ p{
     display: flex;
     clear: both
 }
+
+/*POP up purchase*/
+ .card {
+  --bg-card: #fddaae;
+  --primary: #c57e36;
+  --primary-800: #e7a96b;
+  --primary-shadow: #8d5a27;
+  --light: #d9d9d9;
+  --zinc-800: #020202;
+  --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+  background: var(--bg-card);
+  border-radius: 1rem;
+  width: 80%;
+  max-width: 400px;
+}
+
+.image_container {
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 8rem;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.image_container .image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 3rem;
+  fill: var(--light);
+}
+
+.book__title {
+  overflow: clip;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #020202;
+  text-transform: capitalize;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-family: "Fugaz One", sans-serif;
+}
+
+.size {
+  font-size: 0.75rem;
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-size {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.item-list-button {
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: var(--zinc-800);
+  font-size: 0.75rem;
+  color: var(--light);
+  border: 2px solid var(--zinc-800);
+  border-radius: 0.25rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.item-list-button:hover {
+  border-color: var(--primary-shadow);
+}
+
+.item-list-button:focus {
+  background-color: var(--primary);
+  border: 2px solid var(--primary-shadow);
+  box-shadow: inset 0px 1px 4px var(--primary-shadow);
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.download-button,
+.close-btn {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid hsla(262, 18%, 57%, 0.5);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  font-family: "Fugaz One", sans-serif; 
+}
+
+.download-button {
+  width: 100%;
+  height: 2.5rem;
+  background-image: var(--bg-linear);
+}
+
+.button-text {
+  color: var(--light);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.button-icon {
+  position: absolute;
+  height: 100%;
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: var(--bg-linear);
+  right: -2.5rem;
+  transition: all 0.3s ease;
+}
+
+.download-svg {
+  width: 1.25rem;
+  fill: var(--light);
+}
+
+.download-button:hover {
+  background: var(--primary);
+}
+
+.download-button:hover .button-text {
+  transform: translateX(-1.25rem);
+  opacity: 0;
+}
+
+.download-button:hover .button-icon {
+  right: 0;
+  width: 100%;
+}
+
+.download-button:active {
+  transform: scale(0.95);
+}
+
+.download-button:active .button-icon {
+  background-color: var(--primary-shadow);
+}
+
+
+#purchasePopup {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  align-items: center;
+  display: inline-flex;
+  border: 0;
+  border-radius: 15px;
+  font-family: "Fugaz One", sans-serif;
+  gap: 0.5em;
+  background-color: #c57e36;
+  color: #020202;
+}
+
+#purchasePopup svg {
+  max-width: 2.5em;
+  max-height: 2.5em;
+}
+
+
+.popup_purchase_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.close-btn {
+  width: 40%;
+  height: 2rem;
+  background: var(--primary-800);
+  font-family: 'Courier New', Courier, monospace; 
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
