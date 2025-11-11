@@ -97,3 +97,67 @@ document.querySelectorAll('.purchasePopup').forEach(openBtn => {
     }
   });
 });
+
+//Scrolling with Arrows 
+
+const scrollSection = document.querySelector('.scroll__person__sec');
+const scrollContainer = document.querySelector('.scroll__container');
+const btnLeft = document.getElementById('scroll-left');
+const btnRight = document.getElementById('scroll-right');
+
+let isManuallyPaused = false;
+let isUserScrolling = false;
+let scrollInterval;
+
+scrollSection.innerHTML += scrollSection.innerHTML;
+
+
+const pauseScroll = () => scrollSection.style.animationPlayState = 'paused';
+const resumeScroll = () => {
+  if (!isManuallyPaused && !isUserScrolling)
+    scrollSection.style.animationPlayState = 'running';
+};
+
+scrollSection.addEventListener('mouseenter', pauseScroll);
+scrollSection.addEventListener('mouseleave', resumeScroll);
+
+
+scrollSection.addEventListener('click', e => {
+  if (e.target.closest('.card')) {
+    isManuallyPaused = !isManuallyPaused;
+    scrollSection.style.animationPlayState = isManuallyPaused ? 'paused' : 'running';
+  }
+});
+
+
+function startScroll(direction) {
+  isUserScrolling = true;
+  pauseScroll();
+  scrollInterval = setInterval(() => {
+    scrollContainer.scrollLeft += direction * 10;
+  }, 30);
+}
+
+function stopScroll() {
+  clearInterval(scrollInterval);
+  isUserScrolling = false;
+  resumeScroll();
+}
+
+btnLeft.addEventListener('mousedown', () => startScroll(-1));
+btnRight.addEventListener('mousedown', () => startScroll(1));
+['mouseup', 'mouseleave'].forEach(evt => document.addEventListener(evt, stopScroll));
+
+//display characters( i did not want to rethink it for pages)
+document.querySelectorAll(".knowChar").forEach(function(boton) {
+    boton.addEventListener('click', function() {
+        var extraClick = boton.nextElementSibling;
+        if (extraClick.style.display === 'none' || extraClick.style.display === '') {
+            extraClick.style.display = 'block';
+            
+        } else {
+            extraClick.style.display = 'none';
+ 
+        }
+    });
+});

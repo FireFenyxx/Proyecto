@@ -9,134 +9,22 @@
     <link rel="stylesheet" href="CSS/nav.css">
     <!-- To be moved a CSS -->
     <style>
-        .scroll__person__sec {
-            display: flex;
-            flex-wrap: nowrap;
-            gap: 10px;
-            overflow: hidden;
-            width: max-content;
-            animation: scroll-loop 15s linear infinite;
-            animation-play-state: running;
-        }
-
-        .card {
-            height: 285px;
-            --bg: #c57e36;
-            background: var(--bg);
-            border-radius: 20px;
-            margin: 0.75em;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            transition: 0.2s ease-in-out;
-
-            flex: 0 0 auto;
-            width: 200px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        .char__sec {
-            width: 195px;
-            position: absolute;
-            transition: 0.2s ease-in-out;
-            z-index: 1;
-        }
-
-        .textBox {
-            opacity: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-self: center;
-            gap: 15px;
-            transition: 0.2s ease-in-out;
-            z-index: 2;
-            font-family: 'Courier New', Courier, monospace;
-            padding: 0.25em;
-        }
-
-        .textBox>.text {
-            font-weight: bold;
-        }
-
-        .textBox>.head {
-            font-size: 20px;
-            font-family: "fugaz One", sans-serif;
-        }
-
-        .textBox>.desc {
-            font-size: 12px;
-        }
-
-        .textBox>span {
-            font-size: 12px;
-            color: lightgrey;
-            text-align: center;
-        }
-
-        .card:hover>.textBox {
-            opacity: 1;
-        }
-
-        .card:hover>.char__sec {
-            height: 65%;
-            filter: blur(7px);
-            animation: anim 3s infinite;
-        }
-        .scroll__controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  position: relative;
-  width: 100%;
+#RC1{
+    float: left;
 }
-.scroll__container {
-  overflow: hidden;
-  width: 85%; 
-  position: relative;
+#RC2{float: right;}
+.knowChar{
+    width:50%;
+    height: 30vh;
+    display:inline-block
 }
-.scroll-btn {
-  background: #333;
-  color: white;
-  border: none;
-  font-size: 1.5rem;
-  border-radius: 6px;
-  padding: 8px 12px;
-  cursor: pointer;
-  transition: background 0.2s ease;
+.knowChar img{
+     width:100%;
+     height: 100%;
 }
-
-        @keyframes anim {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes scroll-loop {
-            from {
-                transform: translateX(0);
-            }
-
-            to {
-                transform: translateX(-50%);
-            }
-        }
-
-        .card:hover {
-            transform: scale(1.04) rotate(-1deg);
-        }
+.hidden-info{
+display:none;
+}
     </style>
 </head>
 
@@ -145,119 +33,47 @@
     <div class="wrapper">
         <div id="nav"></div>
         <main>
-            <div class="scroll__controls">
-                <button id="scroll-left" class="scroll-btn">◀</button>
-                <div class="scroll__container">
-                    <div class="scroll__person__sec">
-                        <div class="card">
-                            <img class="char__sec" src="Imagenes/CharBRom/Hornet.png" alt="personaje A ">
-                            <div class="textBox">
-                                <p class="text head">Hornet</p>
-                                <span>Can kill you(and most provably will)</span>
-                                <p class="text desc">Has killed gods before</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img class="char__sec" src="Imagenes/CharBRom/Sherma.png" alt="personaje B ">
-                            <div class="textBox">
-                                <p class="text head">Sherma</p>
-                                <span>Just hear their song to solve all your problems! (even those eldrich horrors)</span>
-                                <p class="text desc">The Singing Healer</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img class="char__sec" src="Imagenes/CharBRom/Shakra.png" alt="personaje B ">
-                            <div class="textBox">
-                                <p class="text head">Shakra</p>
-                                <span>Follow her song in search of her master. Can keep up with Hornet</span>
-                                <p class="text desc">Mapping the depths!</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img class="char__sec" src="Imagenes/CharBRom/Garmon.png" alt="personaje D ">
-                            <div class="textBox">
-                                <p class="text head">Garmon</p>
-                                <span>dont let the creak of old bones deceive you</span>
-                                <p class="text desc">Clean up Crew!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button id="scroll-right" class="scroll-btn">▶</button>
-            </div>
-            <!-- To be transplanted into JS -->
-            <script>
+           <section>
+            <h2>Main Characters</h2>
+            <button class="knowChar"id=RC1><img src="Imagenes/Personajes/RomChar1.png" alt="RomChar1"></button>
+            <div class="hidden-info">
+                <h3>Name A</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam delectus labore dolor ipsam vel, officia aut ipsum ex eveniet ducimus, reprehenderit nihil consequatur a officiis perferendis eum soluta ut obcaecati.</p>
+            <p>Informationt alternativa:</p>
+            <ul>
+                <li>Lista 1</li>
+                <li>Factoide 2</li>
+                <li>Informacion y Factoideo 3</li>
+            </ul>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, numquam aspernatur. Voluptatem rem eaque consequuntur laboriosam explicabo quaerat possimus obcaecati fugiat quas! Ipsum dignissimos doloribus repudiandae tempore praesentium est, quos neque autem enim sequi, inventore ullam maxime nulla expedita eius atque rerum! Nihil eos porro totam sit perspiciatis, minima voluptatibus.</p></div>
+                <button class="knowChar" id="RC2"><img src="Imagenes/Personajes/RomChar2.png" alt="RomChar2"></button>
+            <div class="hidden-info">
+                <h3>NameB</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam delectus labore dolor ipsam vel, officia aut ipsum ex eveniet ducimus, reprehenderit nihil consequatur a officiis perferendis eum soluta ut obcaecati.</p>
+            <p>Informationt alternativa:</p>
+            <ul>
+                <li>Lista 1</li>
+                <li>Factoide 2</li>
+                <li>Informacion y Factoideo 3</li>
+            </ul>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, numquam aspernatur. Voluptatem rem eaque consequuntur laboriosam explicabo quaerat possimus obcaecati fugiat quas! Ipsum dignissimos doloribus repudiandae tempore praesentium est, quos neque autem enim sequi, inventore ullam maxime nulla expedita eius atque rerum! Nihil eos porro totam sit perspiciatis, minima voluptatibus.</p></div>
+   
+        </section><!-- To be transplanted into JS -->
+<script>
 
-const scrollSection = document.querySelector('.scroll__person__sec');
-const scrollContainer = document.querySelector('.scroll__container');
-const btnLeft = document.getElementById('scroll-left');
-const btnRight = document.getElementById('scroll-right');
-
-let isManuallyPaused = false;
-let isUserScrolling = false;
-
-//Duplicate content for loop
-scrollSection.innerHTML += scrollSection.innerHTML;
-
-function pauseScroll() {
-  scrollSection.style.animationPlayState = 'paused';
-}
-
-function resumeScroll() {
-  if (!isManuallyPaused && !isUserScrolling) {
-    scrollSection.style.animationPlayState = 'running';
-  }
-}
-
-scrollSection.addEventListener('mouseenter', pauseScroll);
-scrollSection.addEventListener('mouseleave', resumeScroll);
-
-
-scrollSection.addEventListener('click', e => {
-  if (e.target.closest('.card')) {
-    isManuallyPaused = !isManuallyPaused;
-    scrollSection.style.animationPlayState = isManuallyPaused ? 'paused' : 'running';
-  }
+    document.querySelectorAll(".knowChar").forEach(function(boton) {
+    boton.addEventListener('click', function() {
+        var extraClick = boton.nextElementSibling;
+        if (extraClick.style.display === 'none' || extraClick.style.display === '') {
+            extraClick.style.display = 'block';
+            
+        } else {
+            extraClick.style.display = 'none';
+ 
+        }
+    });
 });
-
-// 🔹 Manual button scrolling
-btnLeft.addEventListener('mousedown', () => {
-  isUserScrolling = true;
-  pauseScroll();
-  scrollContainer.scrollLeft -= -20;
-});
-btnRight.addEventListener('mousedown', () => {
-  isUserScrolling = true;
-  pauseScroll();
-  scrollContainer.scrollLeft += 20;
-});
-
-// 🔹 Keep moving while holding button
-let scrollInterval;
-btnLeft.addEventListener('mousedown', () => {
-  isUserScrolling = true;
-  pauseScroll();
-  scrollInterval = setInterval(() => {
-    scrollContainer.scrollLeft -= 10;
-  }, 30);
-});
-btnRight.addEventListener('mousedown', () => {
-  isUserScrolling = true;
-  pauseScroll();
-  scrollInterval = setInterval(() => {
-    scrollContainer.scrollLeft += 10;
-  }, 30);
-});
-
-// Stop scrolling when mouse released
-['mouseup', 'mouseleave'].forEach(evt => {
-  document.addEventListener(evt, () => {
-    clearInterval(scrollInterval);
-    isUserScrolling = false;
-    resumeScroll();
-  });
-});
-            </script>
+</script>
         </main>
         <div id="foot"></div>
     </div>

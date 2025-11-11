@@ -1,0 +1,136 @@
+       .scroll__person__sec {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  overflow: hidden;
+  animation: scroll-loop 15s linear infinite running;
+}
+
+.card {
+  --bg: #c57e36;
+  background: var(--bg);
+  width: 200px;
+  height: 285px;
+  margin: 0.75em;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: 0.2s ease-in-out;
+}
+
+.char__sec {
+  width: 195px;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.textBox {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0.25em;
+  text-align: center;
+}
+
+.textBox .text {
+  font-weight: bold;
+}
+
+.textBox .head {
+  font-size: 20px;
+  font-family: "Fugaz One", sans-serif;
+}
+
+.textBox .desc,
+.textBox span {
+  font-size: 12px;
+  color: lightgrey;
+}
+
+.card:hover .textBox {
+  opacity: 1;
+}
+
+.card:hover .char__sec {
+  height: 65%;
+  filter: blur(7px);
+  animation: anim 3s infinite;
+}
+
+.scroll__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.scroll__container {
+  overflow: hidden;
+  width: 85%;
+  position: relative;
+}
+
+.scroll-btn {
+  background: #333;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.04) rotate(-1deg);
+}
+
+@keyframes anim {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes scroll-loop {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+        @keyframes anim {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scroll-loop {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .card:hover {
+            transform: scale(1.04) rotate(-1deg);}
