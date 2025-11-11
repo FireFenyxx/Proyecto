@@ -9,22 +9,32 @@
     <link rel="stylesheet" href="CSS/nav.css">
     <!-- To be moved a CSS -->
     <style>
-#RC1{
-    float: left;
-}
-#RC2{float: right;}
-.knowChar{
-    width:50%;
-    height: 30vh;
-    display:inline-block
-}
-.knowChar img{
-     width:100%;
-     height: 100%;
-}
-.hidden-info{
-display:none;
-}
+        #RC1 {
+            float: left;
+        }
+
+        #RC2 {
+            float: right;
+        }
+
+        .knowChar {
+            width: 50%;
+            height: 30vh;
+            display: inline-block;
+
+
+        }
+
+        .knowChar img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hidden-info {
+            display: none;
+            padding-left: 10px;
+
+        }
     </style>
 </head>
 
@@ -33,47 +43,61 @@ display:none;
     <div class="wrapper">
         <div id="nav"></div>
         <main>
-           <section>
-            <h2>Main Characters</h2>
-            <button class="knowChar"id=RC1><img src="Imagenes/Personajes/RomChar1.png" alt="RomChar1"></button>
-            <div class="hidden-info">
-                <h3>Name A</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam delectus labore dolor ipsam vel, officia aut ipsum ex eveniet ducimus, reprehenderit nihil consequatur a officiis perferendis eum soluta ut obcaecati.</p>
-            <p>Informationt alternativa:</p>
-            <ul>
-                <li>Lista 1</li>
-                <li>Factoide 2</li>
-                <li>Informacion y Factoideo 3</li>
-            </ul>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, numquam aspernatur. Voluptatem rem eaque consequuntur laboriosam explicabo quaerat possimus obcaecati fugiat quas! Ipsum dignissimos doloribus repudiandae tempore praesentium est, quos neque autem enim sequi, inventore ullam maxime nulla expedita eius atque rerum! Nihil eos porro totam sit perspiciatis, minima voluptatibus.</p></div>
+            <section>
+                <h2>Main Characters</h2>
+                <button class="knowChar" id=RC1><img src="Imagenes/Personajes/RomChar1.png" alt="RomChar1"></button>
+                <div class="hidden-info">
+                    <h3>Name A</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam delectus labore dolor ipsam
+                        vel, officia aut ipsum ex eveniet ducimus, reprehenderit nihil consequatur a officiis
+                        perferendis eum soluta ut obcaecati.</p>
+                    <p>Informationt alternativa:</p>
+                    <ul>
+                        <li>Lista 1</li>
+                        <li>Factoide 2</li>
+                        <li>Informacion y Factoideo 3</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, numquam aspernatur. Voluptatem
+                        rem eaque consequuntur laboriosam explicabo quaerat possimus obcaecati fugiat quas! Ipsum
+                        dignissimos doloribus repudiandae tempore praesentium est, quos neque autem enim sequi,
+                        inventore ullam maxime nulla expedita eius atque rerum! Nihil eos porro totam sit perspiciatis,
+                        minima voluptatibus.</p>
+                </div>
                 <button class="knowChar" id="RC2"><img src="Imagenes/Personajes/RomChar2.png" alt="RomChar2"></button>
-            <div class="hidden-info">
-                <h3>NameB</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam delectus labore dolor ipsam vel, officia aut ipsum ex eveniet ducimus, reprehenderit nihil consequatur a officiis perferendis eum soluta ut obcaecati.</p>
-            <p>Informationt alternativa:</p>
-            <ul>
-                <li>Lista 1</li>
-                <li>Factoide 2</li>
-                <li>Informacion y Factoideo 3</li>
-            </ul>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, numquam aspernatur. Voluptatem rem eaque consequuntur laboriosam explicabo quaerat possimus obcaecati fugiat quas! Ipsum dignissimos doloribus repudiandae tempore praesentium est, quos neque autem enim sequi, inventore ullam maxime nulla expedita eius atque rerum! Nihil eos porro totam sit perspiciatis, minima voluptatibus.</p></div>
-   
-        </section><!-- To be transplanted into JS -->
-<script>
+                <div class="hidden-info">
+                    <h3>NameB</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam delectus labore dolor ipsam
+                        vel, officia aut ipsum ex eveniet ducimus, reprehenderit nihil consequatur a officiis
+                        perferendis eum soluta ut obcaecati.</p>
+                    <p>Informationt alternativa:</p>
+                    <ul>
+                        <li>Lista 1</li>
+                        <li>Factoide 2</li>
+                        <li>Informacion y Factoideo 3</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, numquam aspernatur. Voluptatem
+                        rem eaque consequuntur laboriosam explicabo quaerat possimus obcaecati fugiat quas! Ipsum
+                        dignissimos doloribus repudiandae tempore praesentium est, quos neque autem enim sequi,
+                        inventore ullam maxime nulla expedita eius atque rerum! Nihil eos porro totam sit perspiciatis,
+                        minima voluptatibus.</p>
+                </div>
 
-    document.querySelectorAll(".knowChar").forEach(function(boton) {
-    boton.addEventListener('click', function() {
-        var extraClick = boton.nextElementSibling;
-        if (extraClick.style.display === 'none' || extraClick.style.display === '') {
-            extraClick.style.display = 'block';
-            
-        } else {
-            extraClick.style.display = 'none';
- 
-        }
-    });
-});
-</script>
+            </section><!-- To be transplanted into JS -->
+            <script>
+
+                document.querySelectorAll(".knowChar").forEach(function (boton) {
+                    boton.addEventListener('click', function () {
+                        var extraClick = boton.nextElementSibling;
+                        if (extraClick.style.display === 'none' || extraClick.style.display === '') {
+                            extraClick.style.display = 'block';
+
+                        } else {
+                            extraClick.style.display = 'none';
+
+                        }
+                    });
+                });
+            </script>
         </main>
         <div id="foot"></div>
     </div>
