@@ -23,12 +23,12 @@ const MENU = `
 
                         <ul class="menu_lvl2">
                             <li><a href="storyA.html">Adventure</a></li>
-                            <li><a href="StoryR.html">Romance</a></li>
+                            <li><a href="storyR.html">Romance</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
-            <li><a href="Author.html">AUTHOR</a></li>
+            <li><a href="author.html">AUTHOR</a></li>
             <li><a href="FAQ.html">FAQ</a></li>
             <li><a href="Gallery.html">FANART</a></li>
         </ul>
