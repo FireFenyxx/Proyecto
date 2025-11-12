@@ -148,16 +148,18 @@ btnLeft.addEventListener('mousedown', () => startScroll(-1));
 btnRight.addEventListener('mousedown', () => startScroll(1));
 ['mouseup', 'mouseleave'].forEach(evt => document.addEventListener(evt, stopScroll));
 
-// //display characters( i did not want to rethink it for pages)
-// document.querySelectorAll(".knowChar").forEach(function(boton) {
-//     boton.addEventListener('click', function() {
-//         var extraClick = boton.nextElementSibling;
-//         if (extraClick.style.display === 'none' || extraClick.style.display === '') {
-//             extraClick.style.display = 'block';
-            
-//         } else {
-//             extraClick.style.display = 'none';
- 
-//         }
-//     });
-// });
+// //display characters( i did not want to rethink it for reutilization pages + also works with margin woohoo)
+                document.querySelectorAll(".knowChar").forEach(function (boton) {
+                    boton.addEventListener('click', function () {
+                        var extraClick = boton.nextElementSibling;
+                        if (extraClick.style.display === 'none' || extraClick.style.display === '') {
+                            extraClick.style.display = 'block';
+                            boton.style.margin = '20px';
+
+                        } else {
+                            extraClick.style.display = 'none';
+                             boton.style.margin = '0px';
+
+                        }
+                    });
+                });
